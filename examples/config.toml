@@ -1,0 +1,68 @@
+# Example htmltoapk configuration.
+#
+# Copy to ~/.config/htmltoapk/config.toml, or generate a fresh one with:
+#   htmltoapk setup
+#
+# Every value can also be changed from the CLI or the TUI:
+#   htmltoapk config set appIdPrefix com.user
+#   htmltoapk config get android.minSdk
+
+# Package prefix. The app segment is appended automatically:
+#   "Recipe Box" + com.user  ->  com.user.recipebox
+appIdPrefix = "com.user"
+
+# Fallback application name when nothing can be derived from the input.
+appName = "My App"
+
+# Default Gradle variant: debug | release
+buildType = "debug"
+
+# Where Capacitor workspaces are generated (kept between builds for speed).
+workspace = "~/.local/share/htmltoapk/workspaces"
+
+# Default directory for produced APKs.
+outputDir = "~/apks"
+
+# Keep the generated workspace after a build (much faster rebuilds).
+keepWorkspace = true
+
+# Derive the app name and application id from the input path / <title>.
+autoNaming = true
+
+# none | debug | keystore
+signing = "debug"
+
+[keystore]
+# Only used when signing = "keystore".
+path = "~/keys/release.jks"
+alias = "upload"
+storePasswordEnv = "HTMLTOAPK_STORE_PASSWORD"
+keyPasswordEnv = "HTMLTOAPK_KEY_PASSWORD"
+
+[assets]
+# 1024x1024 PNG recommended for the icon, 2732x2732 for the splash.
+icon = "~/brand/icon.png"
+splash = "~/brand/splash.png"
+backgroundColor = "#0B0F17"
+generate = true
+
+[android]
+minSdk = 23
+targetSdk = 34
+compileSdk = 34
+versionName = "1.0.0"
+versionCode = 1
+
+[capacitor]
+version = "6"
+webDir = "www"
+androidScheme = "https"
+allowMixedContent = true
+# Extra npm packages installed into every workspace, e.g.:
+# plugins = ["@capacitor/splash-screen", "@capacitor/status-bar"]
+plugins = []
+
+[npm]
+offline = false
+# registry = "https://registry.npmjs.org/"
+extraArgs = []
