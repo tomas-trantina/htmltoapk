@@ -34,18 +34,6 @@ Run it with arguments for scripting, or run it with **no arguments** to open the
 - **Workspace hygiene** - reusable workspaces for fast rebuilds, `clean` to reclaim space, `zip` to archive any project.
 - **Readable failures** - every error has a headline, the failing stage, the exit code, the log path, the last log lines and a hint.
 
-## Screenshots
-
-> Placeholders - drop real captures into `docs/screenshots/` and they will render here.
-
-| Main menu | Build screen |
-| --- | --- |
-| ![TUI main menu](docs/screenshots/tui-menu.png) | ![TUI build progress](docs/screenshots/tui-build.png) |
-
-| Configuration editor | Doctor |
-| --- | --- |
-| ![Configuration editor](docs/screenshots/tui-config.png) | ![Doctor output](docs/screenshots/cli-doctor.png) |
-
 ## Requirements
 
 | Tool | Version | Why |
