@@ -5,6 +5,9 @@
 	A single Rust binary that wraps Capacitor with a friendly CLI and a modern terminal UI.
 </p>
 
+<img width="1167" height="681" alt="image" src="https://github.com/user-attachments/assets/c5493f1f-e25f-4389-a00a-3bc77c8b0ebb" />
+<img width="575" height="646" alt="image" src="https://github.com/user-attachments/assets/f5267805-f9b5-4436-bd11-db628fc9b383" />
+
 <p align="center">
 	<img alt="Rust" src="https://img.shields.io/badge/rust-stable-000?logo=rust">
 	<img alt="Platform" src="https://img.shields.io/badge/platform-Linux-1f6feb">
